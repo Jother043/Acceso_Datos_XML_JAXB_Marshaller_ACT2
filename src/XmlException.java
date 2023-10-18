@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class XmlException {
+public class XmlException extends Exception{
+
+    public XmlException(String message) {
+        super("Error: " + message);
+    }
 }

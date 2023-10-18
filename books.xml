@@ -19,4 +19,18 @@
             an evil sorceress, and her own childhood to become queen
             of the world.</Description>
     </Book>
+    <Book id="bk103">
+        <Author>Garcia, Lorca</Author>
+        <Title>Romancero gitano</Title>
+        <Genre>Romance</Genre>
+        <Price>5.95</Price>
+        <PublishDate>1928-12-16</PublishDate>
+        <Description>The Romancero Gitano," written by the Spanish poet and playwright
+            Federico García Lorca, is a collection of poems that explores the themes of
+            love, passion, and the struggles of the Romani people (Gypsies). It is known
+            for its vivid imagery, emotional intensity, and its portrayal of the Romani
+            culture and their sense of freedom. Published in 1928, this work is considered
+            one of Lorca's most important contributions to Spanish literature and is celebrated
+            for its lyrical and evocative style..</Description>
+    </Book>
 </Catalog>

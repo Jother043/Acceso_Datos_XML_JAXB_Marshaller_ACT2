@@ -6,21 +6,23 @@ import java.util.List;
 @XmlRootElement(name = "Catalog")
 public class BookList {
 
-    private List<Libro> books;
-
-    public BookList(List<Libro> books) {
-        this.books = new ArrayList<>();
-    }
+    private List<Book> books = new ArrayList<>();
 
     public BookList() {
     }
 
     @XmlElement(name = "Book")
-    public List<Libro> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
-
-    public void insertBooks(Libro l) {
+    public void insertBooks(Book l) {
         books.add(l);
+    }
+
+    @Override
+    public String toString() {
+        return "BookList{" +
+                "books=" + books +
+                '}';
     }
 }

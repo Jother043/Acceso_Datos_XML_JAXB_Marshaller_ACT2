@@ -1,28 +1,27 @@
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 @XmlRootElement(name = "book")
-public class Libro {
+public class Book {
 
     @XmlAttribute(name = "id")
     private String id;
     @XmlElement(name = "Author")
-    private String autor;
+    private String author;
     @XmlElement(name = "Title")
-    private String titulo;
+    private String title;
     @XmlElement(name = "Genre")
-    private String genero;
+    private String genre;
     @XmlElement(name = "Price")
-    private String precio;
+    private String price;
     @XmlElement(name = "PublishDate")
-    private Date publicacion;
+    private Date publishDate;
     @XmlElement(name = "Description")
-    private String descripcion;
+    private String description;
 
-    public Libro() {
+    public Book() {
     }
 
     public String getId() {
@@ -30,38 +29,37 @@ public class Libro {
     }
 
     public String getAutor() {
-        return autor;
+        return author;
     }
 
     public String getTitulo() {
-        return titulo;
+        return title;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getGenre() {
+        return genre;
     }
 
-    public String getPrecio() {
-        return precio;
+    public String getPrice() {
+        return price;
     }
 
-    public Date getPublicacion() {
-        return publicacion;
+    public Date getPublishDate() {
+        return publishDate;
     }
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescription() {
+        return description;
     }
 
     @Override
     public String toString() {
-        return "Libro{" +
-                "id='" + id + '\'' +
-                ", autor='" + autor + '\'' +
-                ", titulo='" + titulo + '\'' +
-                ", genero='" + genero + '\'' +
-                ", precio='" + precio + '\'' +
-                ", publicacion='" + publicacion + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                '}';
+        return "Libro " + "\n" +
+                "   id: " + id + "\n" +
+                "   autor: " + author + "\n" +
+                "   titulo: " + title + "\n" +
+                "   genero: " + genre + "\n" +
+                "   precio: " + price + "\n" +
+                "   publicacion: " + publishDate + "\n" +
+                "   descripcion: " + description + "\n";
     }
 }

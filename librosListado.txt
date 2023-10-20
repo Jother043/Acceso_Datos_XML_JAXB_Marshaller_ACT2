@@ -1,0 +1,33 @@
+id: bk101
+titulo: XML Developer's Guide
+autor: Garghentini, Davide
+Genero: Computer
+Descripción: An in-depth look at creating applications
+            with XML.
+Precio: 44.95
+Fecha de publicación: Sun Oct 01 00:00:00 CEST 2000
+-----------------------------
+id: bk102
+titulo: Midnight Rain
+autor: Garcia, Debra
+Genero: Fantasy
+Descripción: A former architect battles corporate zombies,
+            an evil sorceress, and her own childhood to become queen
+            of the world.
+Precio: 5.95
+Fecha de publicación: Sat Dec 16 00:00:00 CET 2000
+-----------------------------
+id: bk103
+titulo: Romancero gitano
+autor: Garcia, Lorca
+Genero: Romance
+Descripción: The Romancero Gitano," written by the Spanish poet and playwright
+            Federico García Lorca, is a collection of poems that explores the themes of
+            love, passion, and the struggles of the Romani people (Gypsies). It is known
+            for its vivid imagery, emotional intensity, and its portrayal of the Romani
+            culture and their sense of freedom. Published in 1928, this work is considered
+            one of Lorca's most important contributions to Spanish literature and is celebrated
+            for its lyrical and evocative style..
+Precio: 5.95
+Fecha de publicación: Sun Dec 16 00:00:00 CET 1928
+-----------------------------

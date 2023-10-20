@@ -1,0 +1,34 @@
+BookList{books=[Libro 
+   id: bk101
+   autor: Garghentini, Davide
+   titulo: XML Developer's Guide
+   genero: Computer
+   precio: 44.95
+   publicacion: Sun Oct 01 00:00:00 CEST 2000
+   descripcion: An in-depth look at creating applications
+            with XML.
+, Libro 
+   id: bk102
+   autor: Garcia, Debra
+   titulo: Midnight Rain
+   genero: Fantasy
+   precio: 5.95
+   publicacion: Sat Dec 16 00:00:00 CET 2000
+   descripcion: A former architect battles corporate zombies,
+            an evil sorceress, and her own childhood to become queen
+            of the world.
+, Libro 
+   id: bk103
+   autor: Garcia, Lorca
+   titulo: Romancero gitano
+   genero: Romance
+   precio: 5.95
+   publicacion: Sun Dec 16 00:00:00 CET 1928
+   descripcion: The Romancero Gitano," written by the Spanish poet and playwright
+            Federico García Lorca, is a collection of poems that explores the themes of
+            love, passion, and the struggles of the Romani people (Gypsies). It is known
+            for its vivid imagery, emotional intensity, and its portrayal of the Romani
+            culture and their sense of freedom. Published in 1928, this work is considered
+            one of Lorca's most important contributions to Spanish literature and is celebrated
+            for its lyrical and evocative style..
+]}

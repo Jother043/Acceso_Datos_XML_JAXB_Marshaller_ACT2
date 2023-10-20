@@ -4,8 +4,10 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class XmlToTxt {
@@ -13,30 +15,37 @@ public class XmlToTxt {
 
     public static void main(String[] args) {
         int opcion;
+        boolean salir = false;
         //Menu
         do {
-            menu();
-            opcion = sc.nextInt();
-            switch (opcion) {
-                case 1:
-                    try {
-                        System.out.println("Introduce el nombre del fichero XML: ");
-                        String fileName = sc.next();
-                        System.out.println("Introduce el nombre del fichero txt: ");
-                        String destiFile = sc.next();
-                        xmlToTxt(fileName, destiFile);
-                    } catch (JAXBException | XmlException | IOException e) {
-                        System.err.println(e.getMessage());
-                    }
-                    break;
-                case 2:
-                    System.out.println("Saliendo...");
-                    break;
-                default:
-                    System.out.println("Opción incorrecta");
-                    break;
+            try {
+                menu();
+                opcion = sc.nextInt();
+                switch (opcion) {
+                    case 1:
+
+                            System.out.println("Introduce el nombre del fichero XML: ");
+                            String fileName = sc.next();
+                            System.out.println("Introduce el nombre del fichero txt: ");
+                            String destiFile = sc.next();
+                            xmlToTxt(fileName, destiFile);
+
+                        break;
+                    case 2:
+                        System.out.println("Saliendo...");
+                        salir = true;
+                        break;
+                    default:
+                        System.out.println("Opción incorrecta");
+                        break;
+                }
+            } catch (JAXBException | XmlException | IOException e ) {
+                System.err.println(e.getMessage());
+            }catch (NumberFormatException | InputMismatchException e){
+                System.err.println("Error, introduce un número");
+                sc.nextLine();
             }
-        } while (opcion != 2);
+        } while (!salir);
 
     }
 
@@ -54,6 +63,7 @@ public class XmlToTxt {
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         BookList bookList = (BookList) jaxbUnmarshaller.unmarshal(file);
         //Try with resources para cerrar el FileWriter al finalizar.
+
         try (FileWriter fw = new FileWriter(destiFile)) {
             for (Book book : bookList.getBooks()) {
                 fw.write("id: " + book.getId() + "\n");
@@ -78,16 +88,16 @@ public class XmlToTxt {
     }
 
     /**
-     * Valida si el fichero existe
+     * Valida si el fichero xml pasado por parámetro existe.
      *
      * @param file;
      * @throws XmlException Excepción propia.
      */
     public static void validacionXml(File file) throws XmlException {
         if (file.exists()) {
-            System.out.println("El fichero existe");
+            System.out.println("El fichero existe y se va a proceder a convertirlo a txt");
         } else {
-            throw new XmlException("El fichero no existe");
+            throw new XmlException("El fichero xml especificado no existe o no se encuentra en la ruta especificada");
         }
     }
 
